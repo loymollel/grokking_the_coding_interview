@@ -2,9 +2,9 @@ fn removing_values(input: Vec<i32>, key: i32) -> i32 {
 
     let mut count = 0;
 
-    for (_k, v) in input.iter().enumerate() {
+    for v in input.into_iter() {
 
-        if v != &key {
+        if v != key {
             count += 1;
         }
     }
